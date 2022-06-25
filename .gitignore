@@ -35,3 +35,4 @@ build/
 
 ### Spring Local Configuration ###
 application-*.yml
+service-account.json
