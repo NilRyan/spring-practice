@@ -6,23 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.security.Principal;
-
 @RestController
-@RequestMapping("/api/hello")
+@RequestMapping("/api/test")
 @RequiredArgsConstructor
-public class HelloWorldController {
+public class TestController {
+
     @GetMapping
-    @PreAuthorize("hasAuthority('READ')")
-    public String helloWorld() {
-        return "Hello World!a";
+    public String test() {
+        return "Deployed to AWS";
     }
-
-    @GetMapping("/test")
-    @PreAuthorize("hasAuthority('READ')")
-    public String test(Principal principal) {
-        return principal.getName();
-    }
-
-
 }
